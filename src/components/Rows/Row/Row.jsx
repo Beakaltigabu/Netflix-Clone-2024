@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
-// import { width } from '@mui/system';
 import axios from '../../../utils/axios';
 import movieTrailer from 'movie-trailer';
 import YouTube from 'react-youtube';
-import './row.css'
+import './row.css';
 
 const Row = ({ title, fetchUrl, isLargeRow }) => {
     const [movies, setMovies] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState("");
-
     const base_url = "https://image.tmdb.org/t/p/original";
 
     useEffect(() => {
@@ -53,15 +51,15 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 
     return (
         <div className="row">
-            <h1>{title}</h1>
-            <div className="row_posters">
+            <h1 className={`${title === "NETFLIX ORIGINALS" ? "row__title" : ""}`}>{title}</h1>
+            <div className="row__posters">
                 {movies?.map((movie, index) => (
                     <img
                         onClick={() => handleClick(movie)}
                         key={movie.id || index}
                         src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
                         alt={movie.name || movie.title}
-                        className={`row_poster ${isLargeRow && "row_posterLarge"}`}
+                        className={`row__poster ${isLargeRow && "row__posterLarge"}`}
                     />
                 ))}
             </div>
