@@ -1,0 +1,28 @@
+.rowList {
+  margin-top: -100px;
+  position: relative;
+  z-index: 1;
+}
+
+.row-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.row-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+  .rowList {
+      margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rowList {
+      margin-top: -30px;
+  }
+}

@@ -1,0 +1,194 @@
+.App {
+  background: #111;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Netflix Intro Animation */
+.netflix-intro {
+  background: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.netflix-intro__logo {
+  position: relative;
+  width: 100px;
+  height: 134px;
+}
+
+.netflix-intro__n {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.netflix-intro__n-beam {
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background: #e50914;
+  transform-origin: center;
+}
+
+.netflix-intro__n-beam--left {
+  left: 0;
+  animation: beamLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.netflix-intro__n-beam--center {
+  left: 50%;
+  transform: translateX(-50%) rotate(20deg);
+  animation: beamCenter 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.3s;
+}
+
+.netflix-intro__n-beam--right {
+  right: 0;
+  animation: beamRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.6s;
+}
+
+@keyframes beamLeft {
+  from { transform: translateX(-100%) scaleY(0); }
+  to { transform: translateX(0) scaleY(1); }
+}
+
+@keyframes beamCenter {
+  from { transform: translateX(-50%) rotate(20deg) scaleY(0); }
+  to { transform: translateX(-50%) rotate(20deg) scaleY(1); }
+}
+
+@keyframes beamRight {
+  from { transform: translateX(100%) scaleY(0); }
+  to { transform: translateX(0) scaleY(1); }
+}
+
+/* Sign In Page Styles */
+.signin {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://assets.nflxext.com/ffe/siteui/vlv3/9c5457b8-9ab0-4a04-9fc1-e608d5670f1a/710d74e0-7158-408e-8d9b-23c219dee5df/IN-en-20210719-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.signin__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px 0;
+}
+
+.signin__form-wrapper {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 60px 68px 40px;
+  width: 450px;
+  border-radius: 4px;
+}
+
+.signin__form-wrapper h1 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+
+.signin__input-group {
+  margin-bottom: 16px;
+}
+
+.signin__input-group input {
+  width: 100%;
+  height: 50px;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 20px;
+  color: white;
+  font-size: 16px;
+}
+
+.signin__input-group input:focus {
+  background: #454545;
+  outline: none;
+}
+
+.signin__button {
+  width: 100%;
+  height: 48px;
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 24px 0 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.signin__button:hover {
+  background: #f40612;
+}
+
+.signin__disclaimer {
+  margin-top: 20px;
+  color: #737373;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Media Queries */
+@media screen and (max-width: 740px) {
+  .signin__form-wrapper {
+    width: 90%;
+    padding: 40px 28px;
+  }
+}
+
+
+
+.App {
+  background: #111;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+

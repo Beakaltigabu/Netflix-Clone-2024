@@ -1,0 +1,147 @@
+.footer {
+    background-color: #141414;
+    color: #808080;
+    padding: 70px 0;
+    margin-top: 20px;
+}
+
+.footer__content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.footer__social-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    font-size: 24px !important;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.social-icon:hover {
+    color: #fff;
+}
+
+.footer__links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 20px 0 30px;
+}
+
+.footer__links-column {
+    list-style: none;
+}
+
+.footer__links-column li {
+    margin-bottom: 16px;
+}
+
+.footer__links-column a {
+    color: #808080;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.footer__links-column a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer__language-selector {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.language-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: transparent;
+    border: 1px solid #808080;
+    color: #808080;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.language-button:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.language-button .rotated {
+    transform: rotate(180deg);
+}
+
+.language-dropdown {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid #808080;
+    border-radius: 2px;
+    margin-bottom: 4px;
+}
+
+.language-option {
+    display: block;
+    width: 100%;
+    padding: 12px 24px;
+    background: transparent;
+    border: none;
+    color: #808080;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.language-option:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.footer__service-code {
+    margin-bottom: 20px;
+}
+
+.service-code-button {
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid #808080;
+    color: #808080;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.service-code-button:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.footer__copyright {
+    font-size: 11px;
+    color: #808080;
+}
+
+@media (max-width: 768px) {
+    .footer__links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__social-links {
+        justify-content: center;
+    }
+}

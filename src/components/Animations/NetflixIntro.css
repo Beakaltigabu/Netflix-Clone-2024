@@ -1,0 +1,47 @@
+.netflix-intro {
+  background: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.netflix-intro__wrapper {
+  position: relative;
+}
+
+.netflix-text {
+  display: flex;
+  justify-content: center;
+}
+
+.netflix-text span {
+  color: #E50914;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 120px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  animation: textReveal 0.7s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.netflix-text span:nth-child(1) { animation-delay: 0s; }
+.netflix-text span:nth-child(2) { animation-delay: 0.1s; }
+.netflix-text span:nth-child(3) { animation-delay: 0.2s; }
+.netflix-text span:nth-child(4) { animation-delay: 0.3s; }
+.netflix-text span:nth-child(5) { animation-delay: 0.4s; }
+.netflix-text span:nth-child(6) { animation-delay: 0.5s; }
+.netflix-text span:nth-child(7) { animation-delay: 0.6s; }
+
+@keyframes textReveal {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

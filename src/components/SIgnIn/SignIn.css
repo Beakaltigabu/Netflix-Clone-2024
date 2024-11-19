@@ -1,0 +1,176 @@
+.signin {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://assets.nflxext.com/ffe/siteui/vlv3/9c5457b8-9ab0-4a04-9fc1-e608d5670f1a/710d74e0-7158-408e-8d9b-23c219dee5df/IN-en-20210719-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.signin__header {
+    padding: 24px 48px;
+}
+
+.signin__logo {
+    width: 167px;
+}
+
+.signin__content {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.signin__form-wrapper {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 60px 68px 40px;
+    width: 450px;
+    border-radius: 4px;
+}
+
+.signin__form-wrapper h1 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 28px;
+}
+
+.signin__input-group {
+    margin-bottom: 16px;
+}
+
+.signin__input-group input {
+    width: 100%;
+    height: 50px;
+    background: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.signin__input-group input:focus {
+    background: #454545;
+    outline: none;
+}
+
+.signin__button {
+    width: 100%;
+    height: 48px;
+    background: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 24px 0 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.signin__button:hover {
+    background: #f40612;
+}
+
+.signin__form-help {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #b3b3b3;
+    font-size: 13px;
+}
+
+.signin__remember {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.signin__form-help a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.signin__form-help a:hover {
+    text-decoration: underline;
+}
+
+.signin__new {
+    color: #737373;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.signin__new a {
+    color: white;
+    text-decoration: none;
+}
+
+.signin__new a:hover {
+    text-decoration: underline;
+}
+
+.signin__disclaimer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid #737373;
+    color: #737373;
+    font-size: 13px;
+    text-align: center;
+}
+
+.signin__disclaimer p {
+    margin: 8px 0;
+}
+.signin__signup-button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin-top: 16px;
+    transition: color 0.2s ease;
+}
+
+.signin__signup-button:hover {
+    text-decoration: underline;
+}
+
+.signin__new {
+    text-align: center;
+    color: #737373;
+    margin-top: 16px;
+}
+
+.signin__new p {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+
+.auth-switch {
+    text-align: center;
+    color: #737373;
+    margin-top: 16px;
+}
+
+.auth-switch p {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.auth-switch-button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.auth-switch-button:hover {
+    text-decoration: underline;
+}

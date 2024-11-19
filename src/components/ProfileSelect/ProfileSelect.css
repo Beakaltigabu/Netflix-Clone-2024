@@ -1,0 +1,126 @@
+.profile-select {
+    min-height: 100vh;
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-select__container {
+    text-align: center;
+    color: #fff;
+}
+
+.profile-select__container h1 {
+    font-size: 3.5vw;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.profile-select__profiles {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 40px;
+}
+
+.profile-select__profile {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profile-select__profile:hover {
+    transform: scale(1.1);
+}
+
+.profile-select__profile:hover .profile-select__name {
+    color: #fff;
+}
+
+.profile-select__avatar {
+    width: 10vw;
+    height: 10vw;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 84px;
+    min-height: 84px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-select__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-select__add .profile-select__avatar {
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-select__add .profile-select__avatar svg {
+    font-size: 40px;
+    color: #808080;
+}
+
+.profile-select__name {
+    color: #808080;
+    font-size: 1.3vw;
+    transition: color 0.2s ease;
+}
+
+.profile-select__manage {
+    background: transparent;
+    border: 1px solid #808080;
+    color: #808080;
+    padding: 8px 24px;
+    font-size: 1.2vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    transition: all 0.2s ease;
+}
+
+.profile-select__manage:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-select__container h1 {
+        font-size: 5vw;
+    }
+
+    .profile-select__name {
+        font-size: 2vw;
+    }
+
+    .profile-select__manage {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-select__profiles {
+        flex-wrap: wrap;
+    }
+
+    .profile-select__container h1 {
+        font-size: 6vw;
+    }
+
+    .profile-select__name {
+        font-size: 3vw;
+    }
+
+    .profile-select__manage {
+        font-size: 3vw;
+    }
+}

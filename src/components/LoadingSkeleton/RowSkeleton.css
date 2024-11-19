@@ -1,0 +1,35 @@
+.skeleton-row {
+    margin: 20px 60px;
+    animation: pulse 1.5s infinite;
+}
+
+.skeleton-title {
+    width: 200px;
+    height: 24px;
+    background: #333;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-posters {
+    display: flex;
+    gap: 8px;
+    padding: 20px 0;
+}
+
+.skeleton-poster {
+    width: 260px;
+    height: 145px;
+    background: #333;
+    border-radius: 4px;
+}
+
+.skeleton-poster--large {
+    height: 360px;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.6; }
+}

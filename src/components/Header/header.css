@@ -1,0 +1,151 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 20px 0;
+  transition: all 0.5s;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
+}
+
+.header__black {
+  background-color: #111;
+}
+
+.header__contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 60px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  height: 25px;
+  margin-right: 40px;
+}
+
+.header__links {
+  display: flex;
+  list-style: none;
+}
+
+.header__links li {
+  color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.header__links li:hover {
+  color: #b3b3b3;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 20px;
+}
+
+.header__profile {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.header__dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  min-width: 220px;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 10px 0;
+}
+
+.dropdown__profiles {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dropdown__profile {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  transition: background 0.2s;
+}
+
+.dropdown__profile:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown__profile span {
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+.dropdown__links {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dropdown__links a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.dropdown__links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown__logout {
+  padding: 10px 0;
+}
+
+.dropdown__logout button {
+  width: 100%;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown__logout button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .header__contents {
+    margin: 0 20px;
+  }
+
+  .header__links {
+    display: none;
+  }
+}

@@ -1,0 +1,88 @@
+.row {
+    margin: 3vw 0;
+    padding: 0 4%;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.row__title {
+    font-size: 1.4vw;
+    line-height: 1.25vw;
+    margin-bottom: 0.5em;
+    color: #e5e5e5;
+}
+
+/* .row__container {
+    position: relative;
+} */
+
+.row__posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+
+.poster__container {
+    position: relative;
+    margin-right: 0.2vw;
+    transition: transform 450ms cubic-bezier(0.2, 0.2, 0.5, 1);
+    min-width: 16.66666667%;
+    cursor: pointer;
+}
+
+.row__poster {
+    width: 100%;
+    height: 8.5vw;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.row__posterLarge {
+    height: 21vw;
+}
+
+.poster__container:hover {
+    transform: scale(1.5);
+    z-index: 99;
+}
+
+.row__slider-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4%;
+    background: rgba(20,20,20,.7);
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.row:hover .row__slider-button {
+    opacity: 1;
+}
+
+.row__slider-button.left {
+    left: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.row__slider-button.right {
+    right: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.row__slider-button.hidden {
+    display: none;
+}
